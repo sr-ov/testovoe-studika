@@ -1,0 +1,14 @@
+@mixin resp_val($prop_style, $start_size, $end_size, $start_width, $end_width) {
+	$add_size: $start_size - $end_size;
+	$__width: $start_width - $end_width;
+	/* МЕНЬШЕ КОНТЕЙНЕРА */
+	#{$prop_style}: #{$start_size}px;
+	@media (min-width: #{$end_width}px) and (max-width: #{$start_width}px) {
+		#{$prop_style}: calc(
+			#{$end_size}px + #{$add_size} * ((100vw - #{$end_width}px) / #{$__width})
+		);
+	}
+	@media (max-width: #{$end_width}px) {
+		#{$prop_style}: #{$end_size}px;
+	}
+}

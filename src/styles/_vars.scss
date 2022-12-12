@@ -1,0 +1,17 @@
+$container_width: 1280;
+$container_padding: 15;
+$fz_base: 14;
+
+:root {
+	--fz-prim: #{$fz_base}px;
+	--c-prim: #222222;
+	--c-sec: #767676;
+	--c-thr: #f1f1f1;
+	--c-acc: #0656b4;
+	--c-acc-hover: #0864ce;
+
+	--ff-prim: 'Open Sans';
+
+	--container-width: #{$container_width}px;
+	--container-padding: #{$container_padding}px;
+}
